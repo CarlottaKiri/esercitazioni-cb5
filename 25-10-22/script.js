@@ -21,7 +21,7 @@ switch (inputOperation) {
     alert(result);
     break;
   case "/":
-    if (number2 == 0) {
+    if (number2 === 0) {
       alert("Impossibile dividere per 0.");
     } else {
       result = number1 / number2;
