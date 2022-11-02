@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+}
+
+.hero {
+  padding: 20px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.four-star-character,
+.five-star-character {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-list {
+  padding: 20px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 240px;
+  height: 560px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 40px;
+}
+.card img {
+  width: 250px;
+}
+
+.card p {
+  overflow-y: scroll;
+}
+.four-star {
+  box-shadow: inset 0 0 6px rgb(142, 21, 241);
+}
+
+.five-star {
+  box-shadow: inset 0 0 6px rgb(209, 167, 0);
+}
