@@ -1,0 +1,212 @@
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+@import url("https://fonts.cdnfonts.com/css/thegoodmonolith");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+body {
+  margin: 0;
+  background-color: gray;
+}
+
+span {
+  font-size: 20px;
+  font-family: "Russo One", sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "TheGoodMonolith";
+}
+
+.intro__section {
+  background-color: rgb(128, 128, 128);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.logo {
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login__button {
+  width: 60px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "TheGoodMonolith", sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 199, 32);
+  border-radius: 10px;
+}
+
+.login__button:hover {
+  background-color: rgb(144, 3, 3);
+  color: white;
+}
+
+.dropbtn {
+  background-color: rgb(255, 199, 32);
+
+  padding: 10px;
+
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: rgb(170, 134, 23);
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 10%;
+  font-family: "TheGoodMonolith", sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 80%;
+  background-color: rgb(255, 199, 32);
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(218, 134, 0);
+}
+
+.show {
+  display: block;
+}
+
+.hero__section {
+  margin: 10px 20px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.hero__section img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(232, 232, 232, 0.675);
+
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-family: "Pokemon Solid", serif;
+
+  margin: 0;
+  color: rgb(235, 200, 4);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(0, 13, 90);
+}
+
+.hero p {
+  text-align: center;
+  font-family: "TheGoodMonolith", sans-serif;
+  font-weight: bold;
+
+  margin-top: 0;
+}
+
+.pokemon__list {
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(227, 129, 9),
+    rgb(236, 205, 0)
+  );
+  margin: 0 20px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.pokemon__list h2 {
+  font-size: 50px;
+  margin-bottom: 0;
+
+  font-family: "TheGoodMonolith", sans-serif;
+}
+
+.pokemon__cards {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pokemon__cards div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 3px solid rgb(0, 0, 152);
+  border-radius: 10px;
+  padding: 40px;
+  width: 120px;
+  height: 220px;
+}
+
+.pokemon__cards div img:hover {
+  animation: jump 1s ease-out 0s infinite alternate;
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(-10);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
