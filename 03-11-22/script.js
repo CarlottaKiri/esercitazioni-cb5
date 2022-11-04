@@ -15,10 +15,20 @@ const color = {
   rock: "#B8A038",
   fighting: "#C03028",
   ghost: "#705898",
+  dragon: "#7038F8",
 };
 
 const createCard = (id, name, sprites, types, parent) => {
   const cardEl = document.createElement("div");
+  cardEl.className = "card";
+  cardEl.id = name;
+
+  const aEl = document.createElement("a");
+  aEl.href = "https://www.pokemon.com/it/pokedex/" + name;
+  aEl.target = "_blank";
+
+  const cardContentEl = document.createElement("div");
+
   const typesArray = types.split(",");
   cardEl.style.backgroundImage =
     "linear-gradient(57deg," +
@@ -40,12 +50,14 @@ const createCard = (id, name, sprites, types, parent) => {
   const typesEl = document.createElement("span");
   typesEl.textContent = types;
 
-  cardEl.append(idEl, nameEl, spritesEl, typesEl);
+  cardContentEl.append(idEl, nameEl, spritesEl, typesEl);
+  aEl.appendChild(cardContentEl);
+  cardEl.appendChild(aEl);
   parent.appendChild(cardEl);
 };
 const pokemonEl = document.querySelector(".pokemon__list > .pokemon__cards");
 
-//
+// API IMPLEMENTATION
 const promises = [];
 for (let i = 1; i <= 150; i++) {
   const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
@@ -61,5 +73,15 @@ Promise.all(promises).then((results) => {
       pokemonEl
     );
   });
-  console.log(results);
 });
+
+// POPUP LOGIN EVENT
+document.querySelector("#show-login").addEventListener("click", function () {
+  document.querySelector(".popup").classList.add("active");
+});
+
+document
+  .querySelector(".popup .close__btn")
+  .addEventListener("click", function () {
+    document.querySelector(".popup").classList.remove("active");
+  });

@@ -2,9 +2,25 @@
 @import url("https://fonts.cdnfonts.com/css/thegoodmonolith");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background-color: gray;
+}
+main {
+  background-image: url(./img/body-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 span {
@@ -17,12 +33,33 @@ h3 {
   font-family: "TheGoodMonolith";
 }
 
+footer {
+  background-color: rgb(17, 15, 28);
+  text-align: center;
+  color: white;
+  font-family: "TheGoodMonolith", sans-serif;
+  padding: 20px;
+}
+
+#searchBar {
+  background: none;
+  color: black;
+  font-family: "TheGoodMonolith", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  width: 80%;
+  padding: 10px;
+  border: 2px dotted black;
+  border-radius: 10px;
+}
+
 .intro__section {
-  background-color: rgb(128, 128, 128);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 20px;
+  padding-top: 20px;
+  margin: 0px 20px;
 }
 
 .logo {
@@ -32,7 +69,7 @@ h3 {
 .buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
 }
 
 .login__button {
@@ -51,18 +88,74 @@ h3 {
   color: white;
 }
 
+.popup {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  padding: 20px 30px;
+  background: white;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  z-index: 2;
+  font-family: "TheGoodMonolith", sans-serif;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+
+.popup.active {
+  top: 50%;
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+
+.popup .close__btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__element button {
+  color: white;
+  background-color: rgb(43, 42, 42);
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .dropbtn {
   background-color: rgb(255, 199, 32);
-
+  position: fixed;
+  top: 4%;
+  right: 2px;
   padding: 10px;
 
   border-radius: 50px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: rgb(170, 134, 23);
+  background-color: rgb(254, 239, 36);
 }
 
 .dropdown {
@@ -71,13 +164,13 @@ h3 {
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 10%;
   font-family: "TheGoodMonolith", sans-serif;
   font-weight: bold;
   border-radius: 10px;
   width: 80%;
-  background-color: rgb(255, 199, 32);
+  background-color: rgb(254, 236, 43);
   text-align: center;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -161,8 +254,8 @@ h3 {
   text-align: center;
   background-image: linear-gradient(
     to right,
-    rgb(227, 129, 9),
-    rgb(236, 205, 0)
+    rgb(255, 158, 40),
+    rgb(255, 230, 69)
   );
   margin: 0 20px;
   padding: 10px;
@@ -184,7 +277,7 @@ h3 {
   gap: 20px;
 }
 
-.pokemon__cards div {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -198,15 +291,84 @@ h3 {
   height: 220px;
 }
 
-.pokemon__cards div img:hover {
+.card:hover {
+  cursor: pointer;
+  animation: bounce 0.5s linear;
+}
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(-0px);
+  }
+}
+
+.card img:hover {
   animation: jump 1s ease-out 0s infinite alternate;
 }
 
 @keyframes jump {
   from {
-    transform: translateY(-10);
+    transform: translateY(-10px);
   }
   to {
     transform: translateY(-20px);
+  }
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer__links h2 {
+  margin-bottom: 0;
+}
+.footer__links a {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media screen and (min-width: 770px) {
+  main {
+    padding: 80px;
+  }
+
+  .intro__section {
+    padding: 0 60px;
+  }
+
+  .login__button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid gray;
+  }
+
+  .dropbtn {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border: 1px solid gray;
+  }
+  .hero__section h1 {
+    font-size: 46px;
+  }
+
+  .hero__section p {
+    font-size: 20px;
   }
 }

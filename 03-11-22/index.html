@@ -9,41 +9,88 @@
     <title>Pokédex</title>
   </head>
   <body>
-    <section class="intro__section">
-      <div class="logo">
-        <img src="./img/logo-icon.png" alt="logo-icon" />
-        <img src="./img/pokédex_logo.png" alt="logo-text" />
-      </div>
-      <div class="buttons">
-        <button class="login__button" type="submit">Login</button>
-        <div class="dropdown">
-          <button onclick="dropdownToggle()" class="dropbtn">
-            <img src="./img/menu-icon.png" alt="menu-icon" />
+    <main>
+      <section class="intro__section">
+        <div class="logo">
+          <img src="./img/logo-icon.png" alt="logo-icon" />
+          <img src="./img/pokédex_logo.png" alt="logo-text" />
+        </div>
+        <div class="buttons">
+          <button class="login__button" id="show-login" type="submit">
+            Login
           </button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+          <div class="popup">
+            <div class="close__btn">&times;</div>
+            <div class="form">
+              <h2>Log In</h2>
+              <div class="form__element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email..." />
+              </div>
+              <div class="form__element">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter password..."
+                />
+              </div>
+              <div class="form__element">
+                <button>Let's Go!</button>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="dropdownToggle()" class="dropbtn">
+              <img src="./img/menu-icon.png" alt="menu-icon" />
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#intro">Intro</a>
+              <a href="#list">List</a>
+              <a href="#credits">Social & Credits</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="hero__section">
-      <img src="./img/hero-background.jpg" alt="background" />
-      <div class="hero">
-        <h1 class="hero__title">Pokémon Pokédex</h1>
-        <p class="hero__description">
-          Creato con amore (e sudore) per tutti gli appassionati di Pokémon!
-          Scorri la galleria, trova il tuo Pokémon, clicka e... non avrà più
-          segreti per te!
-        </p>
-      </div>
-    </section>
-    <section class="pokemon__list">
-      <h2>Pokémon List</h2>
-      <div class="pokemon__cards"></div>
-    </section>
+      </section>
+      <section class="hero__section" id="intro">
+        <img src="./img/hero-background.jpg" alt="background" />
+        <div class="hero">
+          <h1 class="hero__title">Pokémon Pokédex</h1>
+          <p class="hero__description">
+            Creato con amore (e sudore) per tutti gli appassionati di Pokémon!
+            Scrivi un nome, trova il tuo Pokémon, clicka e... non avrà più
+            segreti per te!
+          </p>
+        </div>
+      </section>
+      <section class="pokemon__list" id="list">
+        <h2>Pokémon List</h2>
+        <input
+          type="text"
+          id="searchBar"
+          onkeyup="searchBar()"
+          placeholder="Scrivi un nome..."
+        />
+        <div class="pokemon__cards"></div>
+      </section>
 
-    <script src="script.js" type="module"></script>
+      <script src="script.js" type="module"></script>
+    </main>
+    <footer id="credits">
+      <h2>Made with ♥ by Carlotta</h2>
+      <div class="footer__info">
+        <div class="footer__links">
+          <h2>Find me on:</h2>
+          <a href="https://www.instagram.com/sushirollkiri"> 💌Instagram</a>
+          <a href="https://www.linkedin.com/in/carlotta-patan%C3%A8/"
+            >💌LinkedIn</a
+          >
+          <a href="https://github.com/CarlottaKiri">💌</br>GitHub</a>
+        </div>
+        <div class="footer__gif">
+          <img src="./img/kiri.gif" alt="avatar" />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
