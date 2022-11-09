@@ -69,7 +69,6 @@ const loadPokemons = () => {
 
   const promises = [];
   for (let i = loaded; i <= loaded + 49; i++) {
-    loadingEl.classList.add("active");
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((res) => res.json()));
   }
@@ -87,15 +86,15 @@ const loadPokemons = () => {
         );
       });
     })
+
     .finally(() => {
       loadingEl.classList.remove("active");
-      loading = false;
     });
 };
 
 let loaded = 1;
 const limit = 150;
-loadPokemons();
+const myTimeout = setTimeout(loadPokemons, 5000);
 
 document.addEventListener("scroll", (e) => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
