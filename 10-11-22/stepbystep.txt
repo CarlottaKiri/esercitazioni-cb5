@@ -1,0 +1,4 @@
+1. Prendo tante citazioni dall'esterno (fetch api)
+2. Creo un contenitore per far vedere le citazioni (creazione card element su HTML)
+3. Scelgo di creare un bottone per far cambiare le citazioni al click (creazione button su HTML e event su JS)
+4. Voglio eseguire il fetch al primo caricamento della pagina (onFirstLoad su JS) 
