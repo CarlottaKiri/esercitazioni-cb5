@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Russo+One&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url(./background.png);
+  background-size: cover;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+}
+
+h1 img {
+  width: 250px;
+}
+
+.cards {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px;
+  width: 120px;
+  height: 220px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+}
+
+.id {
+  background-color: rgba(35, 35, 35, 0.168);
+  border-radius: 10px;
+  width: 40%;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.card img {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.526);
+  padding: 10px;
+}
+
+.buttons {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  gap: 108px;
+}
+.buttons button {
+  background: none;
+  border: none;
+}
+
+.buttons img {
+  width: 40px;
+  background: none;
+}
+
+.loading {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.loading img {
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1025px) {
+  .buttons {
+    top: 30%;
+  }
+}
