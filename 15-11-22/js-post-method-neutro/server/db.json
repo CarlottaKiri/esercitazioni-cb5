@@ -1,0 +1,14 @@
+{
+  "pokemon": [
+    {
+      "id": "03518dc0-f7b9-4a16-9155-08398aa0a042",
+      "name": "bulbasaur",
+      "type": "grass"
+    },
+    {
+      "id": "fc4a385f-4780-4d2a-a3d1-0432fda073e9",
+      "name": "charmander",
+      "type": "fire"
+    }
+  ]
+}
