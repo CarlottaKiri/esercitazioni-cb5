@@ -9,6 +9,21 @@
       "id": "fc4a385f-4780-4d2a-a3d1-0432fda073e9",
       "name": "charmander",
       "type": "fire"
+    },
+    {
+      "id": "c001c6bc-44d8-4435-86a5-998162da62f9",
+      "name": "squirtle",
+      "type": "water"
+    },
+    {
+      "id": "c4a8ff87-9739-4583-8d63-ed6c54f89374",
+      "name": "ivysaur",
+      "type": "grass/poison"
+    },
+    {
+      "id": "d04b8778-deb0-45fe-9650-3675b2295f4e",
+      "name": "venusaur",
+      "type": "grass/poison"
     }
   ]
 }
