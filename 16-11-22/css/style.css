@@ -100,3 +100,27 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin: 20px 100px;
+  }
+
+  .pkm_list li {
+    min-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 24px;
+  }
+
+  .hero {
+    margin: 20px 200px;
+  }
+
+  .pkm_list li {
+    min-width: 600px;
+  }
+}
