@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!--HERO-FORM SECTION-->
+    <div class="hero">
+      <img src="./img/pkm_logo.png" alt="logo" />
+      <div class="hero_form">
+        <form name="pokemon">
+          <input type="text" name="pkm_name" placeholder="Pokémon Name" />
+          <input type="text" name="pkm_type" placeholder="Pokémon Type" />
+          <button type="submit" class="btn">
+            <img src="./img/form_icon.png" alt="" />
+          </button>
+        </form>
+      </div>
+      <img src="./img/hero.gif" alt="gif" />
+    </div>
+    <!--CARDS SECTION-->
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/utils.js"></script>
   </body>
