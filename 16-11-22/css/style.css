@@ -2,6 +2,7 @@
 
   1. GENERAL
   2. HERO-FORM
+  3. CARDS SECTION
 
 */
 
@@ -70,4 +71,32 @@ body {
 }
 .btn img:hover {
   transform: scale(1.3);
+}
+
+/* CARDS SECTION*/
+
+.cards_section {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card_list {
+  padding: 20px 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.card_list div {
+  background-color: rgb(255, 243, 135);
+  border: 2px solid rgb(220, 153, 71);
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 290px;
+  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
 }
