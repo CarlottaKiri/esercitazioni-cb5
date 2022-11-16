@@ -1,9 +1,19 @@
 {
-	"pokemon": [
-		{
-			"id": 1,
-			"name": "Bulbasarur",
-			"type": "grass"
-		}
-	]
+  "pokemon": [
+    {
+      "id": "8b978ac5-153c-48c1-9f95-9b1cc6d5528a",
+      "name": "Bulbasaur",
+      "type": "grass"
+    },
+    {
+      "id": "22c5bbce-5288-48d2-b695-0d5d414ed625",
+      "name": "Ivysaur",
+      "type": "grass/poison"
+    },
+    {
+      "id": "02b0d35e-24c4-4f1d-9e0a-a704af4c4d8c",
+      "name": "Ivysaur",
+      "type": "grass/poison"
+    }
+  ]
 }
