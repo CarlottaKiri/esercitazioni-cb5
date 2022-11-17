@@ -41,15 +41,21 @@ GET(BASE_URL).then((data) => {
 });
 
 function searchBar(input) {
-  const cardsEl = document.getElementsByClassName("card");
+  deleteCards();
 
-  for (let cardEl of cardsEl) {
-    const nameEl = cardEl.getElementsByTagName("h4")[0];
-    if (nameEl.textContent.toUpperCase().indexOf(input.toUpperCase()) > -1) {
-      cardEl.style.display = "";
-    } else {
-      cardEl.style.display = "none";
-    }
+  const productsListFiltered = productsList.filter(
+    (product) => product.title.toUpperCase().indexOf(input.toUpperCase()) > -1
+  );
+
+  productsListFiltered.map((product) => {
+    createCardEl(product, cardList);
+  });
+}
+
+function deleteCards() {
+  const cardsEl = document.getElementsByClassName("cardList")[0];
+  while (cardsEl.firstChild) {
+    cardsEl.removeChild(cardsEl.lastChild);
   }
 }
 
