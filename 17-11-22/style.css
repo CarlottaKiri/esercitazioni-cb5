@@ -1,0 +1,127 @@
+html,
+body {
+  margin: 0;
+}
+
+.hero {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.cardList {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.card__img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.card__text,
+.card__title {
+  width: 250px;
+}
+
+.login__button {
+  width: 60px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "TheGoodMonolith", sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 199, 32);
+  border-radius: 10px;
+}
+
+.login__button:hover {
+  background-color: rgb(144, 3, 3);
+  color: white;
+}
+
+.popup {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  padding: 20px 30px;
+  background: white;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  z-index: 2;
+  font-family: "TheGoodMonolith", sans-serif;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+
+.popup.active {
+  top: 50%;
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup .close__btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__element button {
+  color: white;
+  background-color: rgb(43, 42, 42);
+  border-radius: 10px;
+  padding: 10px;
+}
