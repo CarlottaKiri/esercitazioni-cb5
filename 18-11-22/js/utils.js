@@ -25,6 +25,22 @@ const createCard = (url, parent, name, type, id) => {
   delButtonEl.textContent = "DELETE";
   editButtonEl.textContent = "EDIT";
 
+  // EVENT LISTENERS
+  nameEl.addEventListener("dblclick", () => {
+    DELETE(url, id).then(() => location.reload());
+  });
+
+  nameEl.addEventListener("click", () => {
+    const patchForm = document.forms.pokemon_edit;
+    const elements = patchForm.elements;
+
+    elements.pkm_id.value = idEl.textContent;
+    elements.pkm_name.value = nameEl.textContent;
+    elements.pkm_type.value = typeEl.textContent;
+
+    window.scrollTo(0, 0);
+  });
+
   editButtonEl.addEventListener("click", () => {
     const patchForm = document.forms.pokemon_edit;
     const elements = patchForm.elements;
@@ -39,6 +55,9 @@ const createCard = (url, parent, name, type, id) => {
   delButtonEl.addEventListener("click", () => {
     DELETE(url, id).then(() => location.reload());
   });
+
+  // APPEND
+
   buttonsEl.append(editButtonEl, delButtonEl);
   cardEl.append(imgEl, idEl, nameEl, typeEl, buttonsEl);
 

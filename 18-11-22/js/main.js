@@ -4,6 +4,9 @@ import { q, createCard } from "./utils.js";
 const divEl = q(".card_list");
 const form = document.forms.pokemon;
 const elements = form.elements;
+const inputEl = q(".searchbar");
+
+let pkmList = [];
 
 const url = "http://localhost:3000/pokemon";
 
@@ -41,7 +44,19 @@ form.addEventListener("submit", (e) => {
   POST(url, data).then(() => location.reload());
 });
 
+// SEARCHBAR
+inputEl.addEventListener("input", (e) => {
+  const searchString = e.target.value;
+
+  divEl.replaceChildren();
+
+  pkmList
+    .filter((pkm) => pkm.name.includes(searchString))
+    .map((pkm) => createCard(url, divEl, pkm?.name, pkm?.type, pkm?.id));
+});
+
 window.onload = GET(url).then((res) => {
+  pkmList = res;
   res.map((pkm) => {
     try {
       max = max > pkm?.id ? max : pkm?.id;
