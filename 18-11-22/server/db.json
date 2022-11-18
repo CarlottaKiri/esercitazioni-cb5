@@ -1,0 +1,44 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "BULBASAUR",
+      "type": "grass"
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "type": "grass/poison"
+    },
+    {
+      "id": 3,
+      "name": "charmander",
+      "type": "fire"
+    },
+    {
+      "id": 5,
+      "name": "Chikorita",
+      "type": "grass"
+    },
+    {
+      "id": 6,
+      "name": "eevee",
+      "type": "normal"
+    },
+    {
+      "id": 7,
+      "name": "vaporeon",
+      "type": "water"
+    },
+    {
+      "id": 8,
+      "name": "jolteon",
+      "type": "electric"
+    },
+    {
+      "id": 9,
+      "name": "flareon",
+      "type": "fire"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!--HERO-FORM SECTION-->
+    <div class="hero">
+      <img src="./img/pkm_logo.png" alt="logo" />
+      <div class="hero_form">
+        <form name="pokemon">
+          <h4>Create a card</h4>
+          <input type="text" name="pkm_name" placeholder="Pokémon Name" />
+          <input type="text" name="pkm_type" placeholder="Pokémon Type" />
+          <button type="submit" class="btn">
+            <img src="./img/form_icon.png" alt="" />
+          </button>
+        </form>
+        <form name="pokemon_edit">
+          <h4>Edit a card</h4>
+          <input type="text" name="pkm_id" placeholder="Change ID" />
+          <input type="text" name="pkm_name" placeholder="Change Name" />
+          <input type="text" name="pkm_type" placeholder="Change Type" />
+          <button type="submit" class="btn">
+            <img src="./img/edit_btn.png" alt="" />
+          </button>
+        </form>
+      </div>
+      <img src="./img/hero.gif" alt="gif" />
+    </div>
+
+    <!--CARDS SECTION-->
+    <div class="cards_section">
+      <h2>Pokémon List</h2>
+
+      <div class="card_list"></div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+    <script type="module" src="./js/api.js"></script>
+  </body>
+</html>
