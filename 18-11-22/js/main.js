@@ -51,7 +51,9 @@ inputEl.addEventListener("input", (e) => {
   divEl.replaceChildren();
 
   pkmList
-    .filter((pkm) => pkm.name.includes(searchString))
+    .filter((pkm) =>
+      pkm.name.toUpperCase().includes(searchString.toUpperCase())
+    )
     .map((pkm) => createCard(url, divEl, pkm?.name, pkm?.type, pkm?.id));
 });
 
