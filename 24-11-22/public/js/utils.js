@@ -5,10 +5,9 @@ const GET = async (URL) => {
 
 function somma(param1, param2) {
   GET(`http://localhost:3000/somma?param1=${param1}&param2=${param2}`).then(
-    (risultato) => {
-      document.querySelector("h3").textContent =
-        "Risultato: " + risultato.risultato;
-      alert(risultato.risultato);
+    (res) => {
+      document.querySelector("h3").textContent = "Risultato: " + res.risultato;
+      alert(res.risultato);
     }
   );
 }
@@ -16,29 +15,26 @@ function somma(param1, param2) {
 function sottrazione(param1, param2) {
   GET(
     `http://localhost:3000/sottrazione?param1=${param1}&param2=${param2}`
-  ).then((risultato) => {
-    document.querySelector("h3").textContent =
-      "Risultato: " + risultato.risultato;
-    alert(risultato.risultato);
+  ).then((res) => {
+    document.querySelector("h3").textContent = "Risultato: " + res.risultato;
+    alert(res.risultato);
   });
 }
 
 function moltiplicazione(param1, param2) {
   GET(
     `http://localhost:3000/moltiplicazione?param1=${param1}&param2=${param2}`
-  ).then((risultato) => {
-    document.querySelector("h3").textContent =
-      "Risultato: " + risultato.risultato;
-    alert(risultato.risultato);
+  ).then((res) => {
+    document.querySelector("h3").textContent = "Risultato: " + res.risultato;
+    alert(res.risultato);
   });
 }
 
 function divisione(param1, param2) {
   GET(`http://localhost:3000/divisione?param1=${param1}&param2=${param2}`).then(
-    (risultato) => {
-      document.querySelector("h3").textContent =
-        "Risultato: " + risultato.risultato;
-      alert(risultato.risultato);
+    (res) => {
+      document.querySelector("h3").textContent = "Risultato: " + res.risultato;
+      alert(res.risultato);
     }
   );
 }
