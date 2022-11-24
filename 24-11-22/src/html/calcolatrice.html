@@ -8,19 +8,13 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h2>Torna alla <a href="calcolatrice">home</a></h2>
-    <h1>Somma</h1>
+    <h1>Scegli la tua operazione</h1>
     <div class="wrapper">
-      <form action="somma">
-        <label for="param1">Primo numero:</label>
-        <input type="text" id="param1" name="param1" />
-        <label for="param2">Secondo numero:</label>
-        <input type="text" id="param2" name="param2" />
-        <button type="submit">=</button>
-      </form>
+      <a href="pagina_somma"><button>➕</button></a>
+      <a href="pagina_sottrazione"><button>➖</button></a>
+      <a href="pagina_moltiplicazione"><button>✕</button></a>
+      <a href="pagina_divisione"><button>➗</button></a>
     </div>
-
-    <h3>Risultato:</h3>
 
     <script src="./script.js" type="module"></script>
     <script src="./utils.js" type="module"></script>
