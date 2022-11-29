@@ -17,7 +17,7 @@ createActor = (actors) => {
     infoEl.className = "info";
 
     nameEl.textContent = actor.nome;
-    cognEl.textcontent = actor.cognome;
+    cognEl.textContent = actor.cognome;
     infoEl.textContent = actor.data_nascita;
 
     actorEl.append(imgEl, nameEl, cognEl, infoEl);
@@ -31,3 +31,16 @@ const url_actor = "http://localhost:3000/attori";
 fetch(url_actor)
   .then((res) => res.json())
   .then((res) => createActor(res));
+
+// SEARCHBAR
+const formEl = document.querySelector("form#searchbar");
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const divEl = document.querySelector(".card_container");
+  divEl.replaceChildren();
+
+  fetch(url_actor + "?searchString=" + formEl.searchString.value)
+    .then((res) => res.json())
+    .then((res) => createActor(res));
+});
