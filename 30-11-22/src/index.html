@@ -17,21 +17,22 @@
           type="text"
           placeholder="Search an actress/actor..."
         />
-        <button type="submit" value="Cerca" class="button">Cerca</button>
+        <button type="submit" value="Cerca" class="button">🔍</button>
       </form>
-      <form name="newactor" id="newactor">
-        <h4>Create a card</h4>
+      <form name="newactor" id="newactor" class="newform">
+        <h2>Create a card</h2>
+        <input type="text" name="actor_id" placeholder="Actor ID" />
         <input type="text" name="actor_name" placeholder="Actor Name" />
         <input type="text" name="actor_surname" placeholder="Actor Surname" />
-        <input type="text" name="actor_id" placeholder="Actor ID" />
+
         <input type="text" name="actor_data" placeholder="Actor birthdate" />
-        <button type="submit" class="btn" value="Create">create</button>
+        <button type="submit" class="btn" value="Create">🖋️</button>
       </form>
     </div>
-    <hr />
-    <div class="card_container"></div>
-    <script type="text/javascript" src="./js/script.js"></script>
 
-    <script type="text/javascript" src="./js/post.js"></script>
+    <div class="card_container"></div>
+    <script type="module" src="./js/script.js"></script>
+
+    <script type="module" src="./js/utils.js"></script>
   </body>
 </html>

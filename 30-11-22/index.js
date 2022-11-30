@@ -155,7 +155,7 @@ app.delete("/attore", function (req, res) {
     return attore.id != id_da_cancellare;
   });
 
-  fs.writeFileSync("./src/attori.json", JSON.stringify(array_deleted));
+  fs.writeFileSync("./src/attori.json", JSON.stringify(arrayDeleted));
 
   res.status(200).send(arrayDeleted);
 });

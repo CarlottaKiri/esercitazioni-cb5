@@ -2,11 +2,56 @@
 
 body {
   font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(./body.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-hr {
-  border: 2px solid rgba(0, 0, 0, 0.71);
-  border-radius: 50%;
+#searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchbar {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button,
+.btn,
+.delete {
+  background: none;
+  border: none;
+  font-size: 26px;
+}
+
+.button:hover,
+.btn:hover,
+.delete:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+.newform {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 10px;
+}
+
+.newform h2 {
+  margin-bottom: 0;
+}
+
+.newform input {
+  text-align: center;
+  border-radius: 10px;
 }
 
 .hero {
@@ -14,8 +59,21 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 30px;
+
+  padding: 30px 30px 70px 30px;
+  background-image: url(./herobg.jpg);
+  background-size: cover;
+  color: white;
+  --mask: radial-gradient(
+        33.63px at 50% calc(100% - 47.5px),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 50px) 0/100px 100%,
+    radial-gradient(33.63px at 50% calc(100% + 22.5px), #0000 99%, #000 101%)
+      50% calc(100% - 25px) / 100px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 .card_container {
@@ -30,9 +88,32 @@ hr {
 }
 
 .card {
+  min-width: 200px;
+  color: white;
   text-align: center;
-  border: 2px solid gray;
-  background-color: lightgray;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(25, 24, 24);
   border-radius: 10px;
   padding: 30px 30px 60px 30px;
+}
+
+.card:hover {
+  cursor: pointer;
+  animation: glowing 2000ms infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 2px hsl(50, 100%, 67%);
+  }
+  50% {
+    box-shadow: 0 0 12px hsl(50, 100%, 67%);
+  }
+  100% {
+    box-shadow: 0 0 2px hsl(50, 100%, 67%);
+  }
+}
+
+.card h2 {
+  margin-top: 0;
 }
