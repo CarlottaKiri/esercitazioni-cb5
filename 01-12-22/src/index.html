@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoteca</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Videoteca</h1>
+      <form id="searchbar">
+        <input
+          class="searchbar"
+          name="searchString"
+          type="text"
+          placeholder="Search an actress/actor..."
+        />
+        <button type="submit" value="Cerca" class="button">🔍</button>
+      </form>
+      <form name="newactor" id="newactor" class="newform">
+        <h2>Create a card</h2>
+        <input type="text" name="actor_id" placeholder="Actor ID" />
+        <input type="text" name="actor_name" placeholder="Actor Name" />
+        <input type="text" name="actor_surname" placeholder="Actor Surname" />
+
+        <input type="text" name="actor_data" placeholder="Actor birthdate" />
+        <button type="submit" class="btn" value="Create">🖋️</button>
+      </form>
+    </div>
+
+    <div class="card_container"></div>
+    <script type="module" src="./js/script.js"></script>
+
+    <script type="module" src="./js/utils.js"></script>
+  </body>
+</html>

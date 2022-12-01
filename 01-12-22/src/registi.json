@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nome": "Cameron",
+    "cognome": "Crowe",
+    "data_nascita": "13/07/1957",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1989",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 2,
+    "nome": "Jeffrey Jacob ",
+    "cognome": "Abrams",
+    "data_nascita": "27/06/1966",
+    "riconoscimenti": "",
+    "inizio_attivita": "1998",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 3,
+    "nome": "Quentin",
+    "cognome": "Tarantino",
+    "data_nascita": "27/03/1963",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1992",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 4,
+    "nome": "Walt",
+    "cognome": "Disney",
+    "data_nascita": "13/12/1901",
+    "riconoscimenti": "Elenco premi vinti",
+    "inizio_attivita": "1941",
+    "fine_attivita": "",
+    "in_attivita": false
+  },
+  {
+    "id": 5,
+    "nome": "Oliver",
+    "cognome": "Stone",
+    "data_nascita": "15/09/1946",
+    "riconoscimenti": "",
+    "inizio_attivita": "1986",
+    "fine_attivita": "",
+    "in_attivita": true
+  },
+  {
+    "id": 6,
+    "nome": "Carlotta",
+    "cognome": "Patane",
+    "data_nascita": "06/01/2000",
+    "riconoscimenti": "tantissimi",
+    "inizio_attivita": "2000",
+    "fine_attivita": "3000",
+    "in_attivita": "true"
+  }
+]
