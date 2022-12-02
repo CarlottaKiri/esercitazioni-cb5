@@ -113,9 +113,9 @@ module.exports = function (app, fs) {
     });
 
     if (index >= 0) {
-      regista.splice(index, 1, nuovo_regista);
+      registi.splice(index, 1, nuovo_regista);
 
-      fs.writeFileSync("./src/regista.json", JSON.stringify(registi));
+      fs.writeFileSync("./src/registi.json", JSON.stringify(registi));
       res.status(200).json({ res: "Regista  aggiornato" });
     } else {
       res.status(200).json({ res: "Regista non trovato" });

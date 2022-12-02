@@ -3,6 +3,12 @@ const fs = require("fs");
 
 const app = express();
 
+app.use((req, res, next) => {
+  console.log("Time:", Date.now());
+  console.log(req.originalUrl);
+  next();
+});
+
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: false }));
@@ -13,6 +19,10 @@ app.listen(3000, () => {
 
 app.get("/home", function (req, res) {
   res.sendFile("index.html", { root: __dirname + "/src" });
+});
+
+app.get("/pagina_registi", function (req, res) {
+  res.sendFile("registi.html", { root: __dirname + "/src" });
 });
 
 app.get("/attori", function (req, res) {
