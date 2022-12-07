@@ -1,6 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const fs = require("fs");
+
+const app = express();
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
+
+app.listen(3000, () => {
+  console.log("Salve, sono in esecuzione sulla porta 3000.");
+});
 mongoose.connect("mongodb://localhost:27017/test_db", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
@@ -20,6 +28,7 @@ const schema_attore = new mongoose.Schema({
   in_attivita: Boolean,
 });
 const modelAttore = mongoose.model("attoris", schema_attore);
+
 const insertAttore = async (obj) => {
   const user = new modelAttore(obj);
   try {
@@ -58,53 +67,6 @@ const updateAttore = async (find_object, update_object) => {
     return error;
   }
 };
-
-const app = express();
-
-app.use((req, res, next) => {
-  console.log("Time:", Date.now());
-  console.log(req.originalUrl);
-  next();
-});
-
-app.use(express.static("public"));
-
-app.use(express.urlencoded({ extended: false }));
-
-app.listen(3000, () => {
-  console.log("Server in ascolto sulla porta 3000");
-});
-
-app.get("/home", function (req, res) {
-  res.sendFile("index.html", { root: __dirname + "/src" });
-});
-
-app.get("/pagina_registi", function (req, res) {
-  res.sendFile("registi.html", { root: __dirname + "/src" });
-});
-
-app.get("/attori", function (req, res) {
-  const attori_text = fs.readFileSync("./src/attori.json", "utf8");
-  const attori = JSON.parse(attori_text);
-
-  let arr_attori = attori;
-  let searchString = req.query.searchString;
-  if (searchString !== "" && searchString !== undefined) {
-    arr_attori = arr_attori.filter((att) =>
-      att.nome
-        .toUpperCase()
-        .includes(
-          searchString.toUpperCase() ||
-            att.cognome.toUpperCase().includes(searchString.toUpperCase())
-        )
-    );
-  }
-  arr_attori = arr_attori.map((att) => {
-    const { id, nome, cognome, data_nascita } = att;
-    return { id, nome, cognome, data_nascita };
-  });
-  res.json(arr_attori);
-});
 
 app.get("/attore/name", function (req, res) {
   const name_attore = req.query.name;
@@ -190,4 +152,4 @@ app.put("/attore", function (req, res) {
   });
 });
 
-require("./index-registi.js")(app, fs);
+require("./index-registi.js")(app, fs, mongoose);
