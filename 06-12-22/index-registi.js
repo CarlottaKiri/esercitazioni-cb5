@@ -1,4 +1,5 @@
-module.exports = function (app, fs, mongoose) {
+module.exports = function (app, fs) {
+  const mongoose = require("mongoose");
   const schema_regista = new mongoose.Schema({
     nome: String,
     cognome: String,
@@ -99,7 +100,7 @@ module.exports = function (app, fs, mongoose) {
     }
 
     const id_da_cancellare = req.body.id;
-    const regista = deleteRegita(id_da_cancellare);
+    const regista = deleteRegista(id_da_cancellare);
     regista.then((regista) => {
       console.log(regista);
       res.send(regista);
