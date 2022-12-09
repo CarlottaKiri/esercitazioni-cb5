@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoteca Film</title>
+    <link rel="stylesheet" href="./css/stylefilm.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <a href="home"><button class="registi">⬅🎭</button></a>
+      <h1>Videoteca Film</h1>
+      <form id="searchbar">
+        <input
+          class="searchbar"
+          name="searchString"
+          type="text"
+          placeholder="Search a movie ..."
+        />
+        <button type="submit" value="Cerca" class="button">🔍</button>
+      </form>
+      <form name="newfilm" id="newfilm" class="newform">
+        <h2>Create a card</h2>
+        <input type="text" name="film_id" placeholder="ID" />
+        <input type="text" name="film_name" placeholder=" Name" />
+        <input type="text" name="film_date" placeholder="Date" />
+
+        <input type="text" name="film_director" placeholder="Director" />
+        <button type="submit" class="btn" value="Create">🖋️</button>
+      </form>
+    </div>
+
+    <div class="card_container"></div>
+    <script type="module" src="./js/scriptfilm.js"></script>
+
+    <script type="module" src="./js/utilsfilm.js"></script>
+  </body>
+</html>

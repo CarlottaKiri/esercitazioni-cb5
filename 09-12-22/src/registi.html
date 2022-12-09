@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoteca Registi</title>
+    <link rel="stylesheet" href="./css/styleregisti.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <a href="home"><button class="attori">⬅🎭</button></a>
+      <h1>Videoteca Registi</h1>
+      <form id="searchbar">
+        <input
+          class="searchbar"
+          name="searchString"
+          type="text"
+          placeholder="Search a movie director..."
+        />
+        <button type="submit" value="Cerca" class="button">🔍</button>
+      </form>
+      <form name="newregista" id="newregista" class="newform">
+        <h2>Create a card</h2>
+        <input type="text" name="regista_id" placeholder="ID" />
+        <input type="text" name="regista_name" placeholder=" Name" />
+        <input type="text" name="regista_surname" placeholder="Surname" />
+
+        <input type="text" name="regista_data" placeholder="Birthdate" />
+        <button type="submit" class="btn" value="Create">🖋️</button>
+      </form>
+    </div>
+
+    <div class="card_container"></div>
+    <script type="module" src="./js/scriptregisti.js"></script>
+
+    <script type="module" src="./js/utilsregisti.js"></script>
+  </body>
+</html>

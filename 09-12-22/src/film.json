@@ -1,0 +1,27 @@
+[
+  {
+    "nome": "Interstellar",
+    "anno_produzione": "2014",
+    "genere": "fantascienza",
+    "regista": "Christopher Nolan",
+    "protagonista": "Matthew McConaughey",
+    "durata": "168",
+    "candidature_oscar": 0,
+    "lingua_originale": "inglese",
+    "produzione": "Warner Bros",
+    "sequel": false
+  },
+
+  {
+    "nome": "Kill Bill",
+    "anno_produzione": "2003",
+    "genere": "action",
+    "regista": "Quentin Tarantino",
+    "protagonista": "Uma Turman",
+    "durata": "180",
+    "candidature_oscar": 0,
+    "lingua_originale": "inglese",
+    "produzione": "Snowblood",
+    "sequel": true
+  }
+]
