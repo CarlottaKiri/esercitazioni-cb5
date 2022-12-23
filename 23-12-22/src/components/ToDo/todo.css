@@ -1,0 +1,24 @@
+li {
+  color: white;
+  list-style-type: none;
+  font-size: 24px;
+}
+
+.todo {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 0;
+}

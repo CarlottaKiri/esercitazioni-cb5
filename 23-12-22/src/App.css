@@ -1,0 +1,14 @@
+body {
+  background-image: url("./966314.jpg");
+  background-repeat: no-repeat;
+}
+
+.App {
+  height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}

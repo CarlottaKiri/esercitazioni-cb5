@@ -1,0 +1,15 @@
+.Text {
+  text-align: center;
+  color: white;
+}
+
+.text-xl {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.text-md {
+  padding: 20px;
+  font-size: 14px;
+}
