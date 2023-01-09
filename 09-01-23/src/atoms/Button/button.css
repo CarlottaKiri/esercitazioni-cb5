@@ -1,0 +1,28 @@
+.Button {
+  border: 1px solid white;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin: 0px 10px;
+  animation: bounce 0.3s infinite alternate;
+}
+@keyframes bounce {
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.Button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.Button--variant-primary {
+  background: rgb(195, 195, 195);
+  border: 2px solid green;
+}
+
+.Button--variant-secondary {
+  background: rgb(0, 0, 0);
+  border: 2px solid white;
+}

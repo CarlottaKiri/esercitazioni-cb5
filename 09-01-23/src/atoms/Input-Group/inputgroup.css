@@ -1,0 +1,11 @@
+.input {
+  background: none;
+  margin: 20px;
+  padding: 10px;
+  border: 3px dotted white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "VT323", sans-serif;
+  color: rgb(0, 54, 119);
+}

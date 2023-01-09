@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+body {
+  background-image: url("./966314.jpg");
+  background-repeat: no-repeat;
+  font-family: "VT323", sans-serif;
+}
+
+.App {
+  height: 100vh;
+  font-family: "VT323", sans-serif;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
