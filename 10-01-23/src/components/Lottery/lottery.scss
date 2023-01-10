@@ -1,0 +1,25 @@
+.content {
+  border: 2px solid rgb(225, 0, 255);
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.title {
+  margin: 0;
+}
+
+.lottery-list li {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.lottery-list {
+  padding: 0;
+}
