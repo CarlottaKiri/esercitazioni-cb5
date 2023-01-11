@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(243, 214, 253);
+  text-align: center;
+}
+
+.App {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  gap: 100px;
+}
+
+.banks,
+.beers,
+.blood-types,
+.users {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  max-width: 200px;
+  height: 300px;
+  max-height: 300px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
