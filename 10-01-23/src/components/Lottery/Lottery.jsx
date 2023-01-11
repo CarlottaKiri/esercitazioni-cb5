@@ -22,7 +22,7 @@ export function Lottery(props) {
       <Button
         className="lottery-button"
         clickHandler={LotteryButtonEvent}
-        {...(number.length >= 6 ? { isDisabled: true } : { isDisabled: false })}
+        {...(number.length >= 7 ? { isDisabled: true } : { isDisabled: false })}
       />
     </div>
   );
