@@ -1,0 +1,22 @@
+.Counter {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.counter-title {
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.output {
+  font-size: 30px;
+}
