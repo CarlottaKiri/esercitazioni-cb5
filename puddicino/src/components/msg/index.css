@@ -1,0 +1,45 @@
+.Message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 10px 20px;
+  color: rgb(240, 240, 240);
+}
+
+.Message img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: rgb(172, 150, 187);
+  box-shadow: rgba(0, 0, 0, 0.521) 0px -50px 36px -28px inset;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.name {
+  margin: 0;
+  font-size: 18px;
+}
+
+.nickname {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.title {
+  margin: 0;
+  color: rgb(203, 156, 247);
+}
+
+hr {
+  color: rgb(172, 150, 187);
+  width: 90%;
+  margin-top: 40px;
+  border-radius: 50%;
+}

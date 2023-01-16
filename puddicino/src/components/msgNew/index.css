@@ -1,0 +1,77 @@
+input {
+  background: none;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 10px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.NewMsg {
+  padding: 20px;
+  color: white;
+  background-color: rgb(68, 59, 71);
+}
+
+.NewMsg form {
+  padding: 30px;
+
+  background-color: rgba(164, 86, 180, 0.37);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.img-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.img-section p {
+  margin-bottom: 0;
+}
+.img-section input {
+  text-align: center;
+}
+.msg-content {
+  height: 80px;
+}
+
+.content-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-section input {
+  text-align: center;
+}
+
+.msg-content {
+  width: 100%;
+}
+
+#selectedFile {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .NewMsg form {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .content-section {
+    width: 100%;
+  }
+}
