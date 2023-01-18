@@ -1,0 +1,66 @@
+.Navbar {
+  color: rgb(233, 233, 233);
+  margin: 0px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(164, 86, 180, 0.37);
+  border-radius: 10px;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title {
+  font-size: 30px;
+  color: white;
+  display: block;
+}
+
+.logo p {
+  font-size: 30px;
+  animation: rotation 6s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.links ul {
+  display: flex;
+  gap: 50px;
+}
+
+.links li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.modal-button {
+  font-size: 18px;
+  color: rgb(233, 233, 233);
+}
+
+@media only screen and (max-width: 1020px) {
+  .Navbar {
+    margin: 0;
+  }
+  .links {
+    display: none;
+  }
+  .logo-title,
+  .logo p {
+    font-size: 18px;
+  }
+
+  .modal-button {
+    font-size: 16px;
+  }
+}

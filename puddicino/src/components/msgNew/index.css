@@ -9,7 +9,7 @@ input {
 }
 
 .NewMsg {
-  padding: 20px;
+  padding: 20px 80px;
   color: white;
   background-color: rgb(68, 59, 71);
 }
@@ -23,12 +23,21 @@ input {
   display: flex;
 
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 300px;
+  flex-wrap: wrap;
 }
 
 .img-section {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -64,7 +73,10 @@ input {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1020px) {
+  .NewMsg {
+    padding: 20px;
+  }
   .NewMsg form {
     flex-direction: column;
     align-items: center;

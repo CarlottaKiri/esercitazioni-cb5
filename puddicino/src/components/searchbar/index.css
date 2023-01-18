@@ -1,0 +1,24 @@
+.Searchbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchbar-button {
+  box-shadow: none;
+  border: none;
+  font-size: 28px;
+}
+
+@media only screen and (max-width: 1020px) {
+  .Searchbar {
+    gap: 0px;
+  }
+
+  .Searchbar input {
+    width: 90px;
+  }
+  .searchbar-button {
+    display: none;
+  }
+}
