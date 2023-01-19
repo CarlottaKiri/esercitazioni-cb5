@@ -4,14 +4,20 @@ import Message from "../msg";
 
 import "./index.css";
 
-const MessagesList = ({ filterSearch }) => {
+const MessagesList = ({ filterSearch, tagSearch }) => {
   const [msgList, setMsgList] = useState([]);
 
   useEffect(() => {
     GET("posts").then(({ posts }) =>
-      setMsgList(posts.filter((post) => post.title.includes(filterSearch)))
+      setMsgList(
+        posts.filter(
+          (post) =>
+            post.title.includes(filterSearch) &&
+            post.tags[0].includes(tagSearch)
+        )
+      )
     );
-  }, [filterSearch]);
+  }, [filterSearch, tagSearch]);
 
   return (
     <div className="List">

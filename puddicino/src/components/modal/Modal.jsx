@@ -3,25 +3,21 @@ import { useState } from "react";
 
 const Modal = () => {
   const [modal, setModal] = useState(false);
+  const [pw, setPw] = useState(true);
 
   const toggleModal = () => {
     setModal(!modal);
   };
-
+  const loginModal = () => {
+    toggleModal();
+  };
   if (modal) {
     document.body.classList.add("active-modal");
   } else {
     document.body.classList.remove("active-modal");
   }
   const togglePassword = () => {
-    const togglePassword = document.querySelector("#togglePassword");
-    const password = document.querySelector("#password");
-
-    togglePassword.addEventListener("click", function (e) {
-      const type =
-        password.getAttribute("type") === "password" ? "text" : "password";
-      password.setAttribute("type", type);
-    });
+    setPw(!pw);
   };
 
   return (
@@ -42,7 +38,11 @@ const Modal = () => {
             </a>
 
             <h4>Password:</h4>
-            <input id="password" type="password" placeholder="password" />
+            <input
+              id="password"
+              type={pw ? "password" : "text"}
+              placeholder="password"
+            />
             <button
               onClick={togglePassword}
               className="toggle-password"
@@ -58,6 +58,10 @@ const Modal = () => {
             </div>
             <button className="close-modal" onClick={toggleModal}>
               X
+            </button>
+
+            <button className="login-done" onClick={loginModal}>
+              ➡️
             </button>
           </div>
         </div>

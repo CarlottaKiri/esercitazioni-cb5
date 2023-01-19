@@ -1,0 +1,21 @@
+.tags-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 300px;
+}
+
+.TagsList {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.taglist-title {
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgb(239, 197, 255);
+}

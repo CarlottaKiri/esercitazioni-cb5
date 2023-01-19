@@ -12,8 +12,6 @@ h4 {
 input {
   text-align: center;
 }
-.modal-button {
-}
 
 .modal-open,
 .overlay {
@@ -64,8 +62,17 @@ input {
 .toggle-password {
   position: absolute;
   color: white;
-  top: 75.5%;
+  top: 65%;
   left: 88%;
   font-size: 28px;
   transform: translate(-50%, -50%);
+}
+
+.login-done {
+  font-size: 40px;
+  color: rgb(240, 240, 240);
+}
+
+.login-done:hover {
+  transform: translate(1.2px);
 }
