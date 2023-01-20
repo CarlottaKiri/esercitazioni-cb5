@@ -1,6 +1,14 @@
 .List {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: rgb(68, 59, 71);
   max-width: 800px;
+}
+
+.list-title {
+  color: rgb(239, 197, 255);
+  margin-top: 5px;
+  text-align: center;
+  font-size: 30px;
 }

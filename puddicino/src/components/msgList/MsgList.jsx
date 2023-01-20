@@ -21,6 +21,7 @@ const MessagesList = ({ filterSearch, tagSearch }) => {
 
   return (
     <div className="List">
+      <h2 className="list-title">Recent Posts</h2>
       {msgList.map((msg) => (
         <Message data={msg} key={msg.id} />
       ))}
