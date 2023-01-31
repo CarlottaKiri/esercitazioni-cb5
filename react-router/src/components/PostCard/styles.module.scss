@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 16px 0px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: rgb(70, 70, 70);
+  width: 40%;
+}
+
+.main:hover {
+  cursor: pointer;
+}

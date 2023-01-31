@@ -1,17 +1,24 @@
 import styles from "./App.module.scss";
-import { Link } from "react-router-dom";
-import image from "./logo.png";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className={styles.App}>
-      <img className={styles.img} src={image} />
-      <h1>Sorry!</h1>
-      <h3>This page is currently under construction!</h3>
-      <h4>Take a look at our </h4>
-      <Link to="/users">Users</Link>
-      <h4>section</h4>
-    </div>
+    <>
+      <div className={styles.App}>
+        <div className={styles.title}>
+          <h1>GUGGOL</h1>
+          <h3>.it</h3>
+        </div>
+        <p>Choose a random option and expand your knowledge!</p>
+        <div className={styles.links}>
+          <Link to="/users">Users</Link>
+          <Link to="/users/4">User Of The Year</Link>
+          <Link to="/posts">Posts</Link>
+          <Link to="/posts/6">Post Of The Year</Link>
+        </div>
+      </div>
+      <Outlet />
+    </>
   );
 }
 

@@ -1,22 +1,23 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import UserCard from "../components/UserCard/UserCard";
+import styles from "./styles/lists.module.scss";
 
 export default function Users() {
-  const { user } = useParams();
-
-  const [userData, setUserData] = useState({});
+  const [usersData, setUsersData] = useState([]);
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/users/${user}`)
+    fetch(`https://dummyjson.com/users?limit=20`)
       .then((res) => res.json())
-      .then((data) => setUserData(data));
+      .then((data) => setUsersData(data.users));
   }, []);
-
   return (
-    <div className="user">
-      <img src={userData.image} alt="user image" />
-      <h3>{userData.firstName}</h3>
-      <h3>{userData.lastName}</h3>
+    <div className={styles.main}>
+      <h1> Users List</h1> <Link to={"/"}>Home</Link>
+      <h4>Click on an user to learn more about them!</h4>
+      {usersData.map((user) => (
+        <UserCard user={user} />
+      ))}
     </div>
   );
 }
