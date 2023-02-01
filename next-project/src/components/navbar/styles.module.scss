@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  ul {
+    display: flex;
+    gap: 30px;
+    li {
+      list-style-type: none;
+      font-size: 20px;
+    }
+  }
+}
