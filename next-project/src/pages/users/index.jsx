@@ -14,9 +14,8 @@ export default function Users({ users }) {
           users={users}
         >
           <Image alt="user" width={100} height={100} src={user.image} />
-          <h3>
-            Name: <h3 className={styles.name}> {user.name}</h3>
-          </h3>
+          <h3>Name:</h3>
+          <h3 className={styles.name}> {user.name}</h3>
           <p className={styles.sparkle}>✧</p>
           {user.email ? (
             <h3 className={styles.mail}>

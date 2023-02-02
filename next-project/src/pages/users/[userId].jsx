@@ -9,12 +9,12 @@ import { users } from "../api/users";
 export default function User({ users }) {
   const router = useRouter();
 
-  const id = router.query.userId;
+  let id = router.query.userId;
 
-  return users.id ? (
-    "No User found!"
-  ) : (
+  return (
     <div className={styles.mainInfo}>
+      <Link href={`/users/${+id - 1}`}>Prev User</Link>
+      <Link href={`/users/${+id + 1}`}>Next User</Link>
       <div className={styles.info}>
         <Image alt="user" width={200} height={200} src={users[id - 1].image} />
         <h4>User ID:{id}</h4>
@@ -26,7 +26,7 @@ export default function User({ users }) {
         <h3>
           Rating: <br></br> {users[id - 1].userRating}
         </h3>
-      </div>{" "}
+      </div>
     </div>
   );
 }
