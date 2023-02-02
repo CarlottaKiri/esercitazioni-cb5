@@ -11,6 +11,9 @@ const users = [
     email: null,
     owner: "Carlotta",
     image: becky,
+    description:
+      "Carlotta's bunny. Might look innocent but she is a demon. Will probably eat all your cables in just one night. Better watch out.",
+    userRating: "★★★★★",
   },
   {
     id: 2,
@@ -18,6 +21,9 @@ const users = [
     email: null,
     owner: "Chiara",
     image: pina,
+    description:
+      "Chiara Maggio's dog. Beautiful. Amazing. An Angel. We cannot go on without a daily Pina pic.",
+    userRating: "∞",
   },
   {
     id: 3,
@@ -25,6 +31,9 @@ const users = [
     email: "carlottapt@gmail.com",
     owner: "Becky",
     image: carlotta,
+    description:
+      "Owner of this website. Looks and sounds smart and stupid at the same time. Bearable person.",
+    userRating: "★★★★☆",
   },
   {
     id: 4,
@@ -32,6 +41,9 @@ const users = [
     email: null,
     owner: "Carlotta",
     image: amelia,
+    description:
+      "Carlotta's 1st cat. Very lovely and chill, but too heavy to be carried around.",
+    userRating: "★★★★★",
   },
   {
     id: 5,
@@ -39,6 +51,8 @@ const users = [
     email: "help@hybe.com",
     owner: "HYBE Ent.",
     image: jhope,
+    description: "Carlotta's favorite artist. She hopes to marry him someday.",
+    userRating: "♥♥♥♥♥",
   },
   {
     id: 6,
@@ -46,13 +60,18 @@ const users = [
     email: "pokèmon@gmail.com",
     owner: "Ash Ketchum",
     image: pikachu,
+    description:
+      "Most famous Pokèmon. Ash Ketchum's life companion. Decent Pokèmon to have in one's team.",
+    userRating: "★★★☆☆",
   },
   {
-    id: 2,
+    id: 7,
     name: "Pina di nuovo perchè se lo merita",
     email: null,
     owner: "Chiara",
     image: pina,
+    description: "Pina is love, Pina is life",
+    userRating: "∞",
   },
 ];
 

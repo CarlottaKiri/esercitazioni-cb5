@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
+import Gallery from "@/components/Gallery/Gallery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,12 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.main}>
-          <p className={styles.p}>Nothing to see here yet</p>
-
-          <Link href="/users">click here to go to our Users list!</Link>
+          <p className={styles.p}>The most beautiful, yet very random users!</p>
+          <Gallery />
+          <div className="link">
+            <h2> Visit our</h2>
+            <Link href="/users"> Users List</Link>
+          </div>
         </div>
       </main>
     </>
