@@ -9,7 +9,8 @@ function Counter() {
   return (
     <div className="wrapper">
       <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      {state.count} {state.name}
+      <span>{state.count}</span>{" "}
+      <span> {state.count === 1 ? "Pina" : state.name}</span>
       <button onClick={() => dispatch({ type: "increment" })}>+</button>
     </div>
   );
