@@ -1,22 +1,34 @@
 import styles from "./styles.module.scss";
 import ApplicationCtx from "../../store/context";
 import { useContext } from "react";
+import Img1 from "./delete.png";
 
 export default function ToDoItem({ data }) {
   const { dispatch } = useContext(ApplicationCtx);
+
   const onHandleClick = (e) => {
     dispatch({
       type: "SET_TODO_ITEM_DONE",
-      payload: e.target.parentNode.id,
+      payload: data.id,
     });
   };
+  const onDeleteClick = (e) => {
+    dispatch({
+      type: "REMOVE_TODO_FROM_LIST",
+      payload: data.id,
+    });
+  };
+
   return (
     <div
       id={data.id}
       className={`${styles.main} ${data.status && styles.statusDone}`}
       onClick={onHandleClick}
     >
-      <h2>{data.content}</h2>
+      <h2 className={styles.content}>📖{data.content}</h2>
+      <button onClick={onDeleteClick}>
+        <img src={Img1} className={styles.delete} />
+      </button>
     </div>
   );
 }

@@ -2,19 +2,28 @@ import "./App.css";
 import { useReducer } from "react";
 import mainReducer from "./store/reducer";
 import initialState from "./store/state";
-import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
 import ToDoList from "./components/todoList/ToDoList";
 import ApplicationCtx from "./store/context";
+import Login from "./components/login/Login";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   const [state, dispatch] = useReducer(mainReducer, initialState);
   return (
-    <ApplicationCtx.Provider value={{ state, dispatch }}>
-      <div className="App">
-        <Navbar />
-        <ToDoList />
-      </div>
-    </ApplicationCtx.Provider>
+    <div className="App">
+      <ApplicationCtx.Provider value={{ state, dispatch }}>
+        {!state.user.username && !localStorage.getItem("Note-app-username") ? (
+          <Login />
+        ) : (
+          <>
+            <Navbar />
+            <Hero />
+            <ToDoList />
+          </>
+        )}
+      </ApplicationCtx.Provider>{" "}
+    </div>
   );
 }
 
