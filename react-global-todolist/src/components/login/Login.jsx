@@ -12,18 +12,22 @@ const Login = () => {
   };
 
   return (
-    <div className={styles.Login}>
-      <h1>Login</h1>
+    <div className={styles.main}>
+      <h1 className={styles.title}>Login</h1>
       <form onSubmit={onHandleSubmit}>
-        <input
-          value={username}
-          onChange={(e) => setUsername(() => e.target.value)}
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Your Name..."
-        />
-        <input type="submit" value="Login" />
+        <div>
+          <p>Your Nickname:</p>
+          <input
+            className={styles.name}
+            value={username}
+            onChange={(e) => setUsername(() => e.target.value)}
+            type="text"
+            id="username"
+            name="username"
+            placeholder="⭐"
+          />
+        </div>
+        <input className={styles.button} type="submit" value="Login" />
       </form>
     </div>
   );
