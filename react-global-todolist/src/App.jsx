@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <ApplicationCtx.Provider value={{ state, dispatch }}>
-        {!state.user.username && !localStorage.getItem("Note-app-username") ? (
+        {JSON.stringify(state.user) === "{}" ? (
           <Login />
         ) : (
           <>

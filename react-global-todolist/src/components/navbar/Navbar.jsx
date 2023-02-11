@@ -8,7 +8,6 @@ export default function Navbar() {
   const { state, dispatch } = useContext(ApplicationCtx);
 
   const onLogout = () => {
-    localStorage.removeItem("Book-app-username");
     dispatch({ type: "REMOVE_USERNAME" });
   };
   return (
@@ -20,7 +19,7 @@ export default function Navbar() {
       <div className={styles.info}>
         <div>
           <h3>Welcome back, </h3>
-          <h3 className={styles.dinamicName}>{state.user.username}</h3>
+          <h3 className={styles.dinamicName}>{state.user?.username}</h3>
         </div>
         <button onClick={() => onLogout()}>
           <img className={styles.logoutImg} src={logout} />

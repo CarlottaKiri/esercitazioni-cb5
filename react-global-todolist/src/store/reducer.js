@@ -3,6 +3,14 @@ import { actions } from "./actions";
 const mainReducer = (state, action) => {
   switch (action.type) {
     case actions.ADD_TODO_TO_LIST:
+      localStorage.setItem(
+        "book-list",
+        JSON.stringify([...state.bookList, action.payload])
+      );
+      localStorage.setItem(
+        "initial-book-list",
+        JSON.stringify([...state.initialBookList, action.payload])
+      );
       return {
         ...state,
         bookList: [...state.bookList, action.payload],
@@ -32,22 +40,24 @@ const mainReducer = (state, action) => {
         ),
       };
     case actions.SET_USERNAME:
-      localStorage.setItem("Book-app-username", action.payload);
+      let users = state.users;
+
+      let currentUser = users.find((user) => user.username === action.payload);
+
+      if (!currentUser) {
+        currentUser = { username: action.payload, bookList: [] };
+        users.push(currentUser);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
       return {
         ...state,
-        user: {
-          ...state.user,
-          username: action.payload,
-        },
+        user: currentUser,
       };
+
     case actions.REMOVE_USERNAME:
-      localStorage.removeItem("Book-app-username");
       return {
         ...state,
-        user: {
-          ...state.user,
-          username: "",
-        },
+        user: {},
       };
     default:
       return state;

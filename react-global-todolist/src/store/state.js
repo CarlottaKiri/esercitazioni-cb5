@@ -33,9 +33,9 @@ const initialState = {
       status: false,
     },
   ],
-  user: {
-    username: localStorage.getItem("Book-app-username"),
-  },
+  bookList: JSON.parse(localStorage.getItem("book-list")) || [],
+  initialBookList: JSON.parse(localStorage.getItem("initial-book-list")) || [],
+  users: JSON.parse(localStorage.getItem("users")) || [],
 };
 
 export default initialState;
