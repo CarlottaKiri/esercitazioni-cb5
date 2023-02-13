@@ -11,7 +11,7 @@ export default function Hero() {
     dispatch({
       type: "ADD_TODO_TO_LIST",
       payload: {
-        id: Math.floor(Math.random() * 100),
+        id: Math.floor(Math.random() * 1000),
         content: content,
         status: false,
       },

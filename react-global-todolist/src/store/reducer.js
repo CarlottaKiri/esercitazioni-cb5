@@ -1,20 +1,26 @@
 import { actions } from "./actions";
 
 const mainReducer = (state, action) => {
+  let currentUser = [];
+  let users = {};
   switch (action.type) {
     case actions.ADD_TODO_TO_LIST:
-      localStorage.setItem(
-        "book-list",
-        JSON.stringify([...state.bookList, action.payload])
-      );
-      localStorage.setItem(
-        "initial-book-list",
-        JSON.stringify([...state.initialBookList, action.payload])
-      );
-      return {
-        ...state,
-        bookList: [...state.bookList, action.payload],
-      };
+      currentUser = state.user;
+
+      if (
+        currentUser &&
+        !currentUser.bookList.find((book) => book.id === action.payload.id)
+      ) {
+        currentUser.bookList.push(action.payload);
+        return {
+          ...state,
+          user: currentUser,
+        };
+      } else {
+        return {
+          ...state,
+        };
+      }
     case actions.SET_TODO_ITEM_DONE:
       return {
         ...state,
@@ -40,9 +46,9 @@ const mainReducer = (state, action) => {
         ),
       };
     case actions.SET_USERNAME:
-      let users = state.users;
+      users = state.users;
 
-      let currentUser = users.find((user) => user.username === action.payload);
+      currentUser = users.find((user) => user.username === action.payload);
 
       if (!currentUser) {
         currentUser = { username: action.payload, bookList: [] };
